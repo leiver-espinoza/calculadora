@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="Calculadora.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="Calculadora.js"></script>
+</head>
+<body style="background-image: url('https://images.pexels.com/photos/3800468/pexels-photo-3800468.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'); background-size: cover;">
+    <div class="row text-center">
+        <div class="col-4 text-center" style="margin-top: 50px; margin-left: 50px;">
+	<div class="calculadora">
+		<div class="calculadora_top">
+			<div class="calculadora_heading">
+				<h1 class="calculadora_title">LEIVER</h1>
+				<h2 class="calculadora_subtitle">TECHNOLOGIES</h2>
+			</div>
+			<div class="calculadora_sun-battery-container">
+			<div class="calculadora_sun-battery"></div>
+			</div>
+		</div>
+		
+		<div class="calculadora_screen-container">
+			<p class="calculadora_screen-mem">M</p> <input id="Pantalla" type="text" class="calculadora_screen" name="screen" value="0" maxlength="10" disabled>
+			<input hidden id="formula" type="text">
+			<input hidden id="status" type="text" value="calculando">
+		</div>
+		
+		<div class="calculadora_botones">
+			<button type="button" data-type="clear" class="button button_type_reset" value="C"						onclick="presionar_tecla('c');">C</button>
+			
+			<!-- Los siguientes botones están por estética pero no son parte de los requerimientos -->
+			<button disabled type="button" data-type="memory" class="button button_type_memory" value="MRC"			onclick="boton_inactivo();">MRC</button>
+			<button disabled type="button" data-type="memory" class="button button_type_memory" value="MRESTAR"		onclick="boton_inactivo();">M-</button>
+			<button disabled type="button" data-type="memory" class="button button_type_memory" value="MSUMAR"		onclick="boton_inactivo();">M+</button>
+			<button disabled type="button" data-type="function" class="button button_type_advanced" value="SIGNO"	onclick="boton_inactivo();">+/-</button>
+			<button disabled type="button" data-type="function" class="button button_type_advanced" value="PORCENT"	onclick="boton_inactivo();">%</button>
+			<button disabled type="button" data-type="function" class="button button_type_advanced" value="RAIZC"	onclick="boton_inactivo();">&#8730;</button>
+			<button disabled type="button" data-type="function" class="button button_type_advanced" value="BORRAR"	onclick="boton_inactivo();">&#8592;</button>
+			<!-- Fin de botones adicionales -->
+
+			<button type="button" data-type="number" 	class="button button_type_number" 		value="7" 			onclick="presionar_tecla(7);">7</button>
+			<button type="button" data-type="number" 	class="button button_type_number" 		value="8" 			onclick="presionar_tecla(8);">8</button>
+			<button type="button" data-type="number" 	class="button button_type_number" 		value="9" 			onclick="presionar_tecla(9);">9</button>
+			<button type="button" data-type="operation" class="button button_type_operation" 	value="DIVIDIR"		onclick="presionar_tecla('/');">÷</button>
+			<button type="button" data-type="number" 	class="button button_type_number" 		value="4"			onclick="presionar_tecla(4);">4</button>
+			<button type="button" data-type="number" 	class="button button_type_number" 		value="5"			onclick="presionar_tecla(5);">5</button>
+			<button type="button" data-type="number" 	class="button button_type_number" 		value="6"			onclick="presionar_tecla(6);">6</button>
+			<button type="button" data-type="operation" class="button button_type_operation" 	value="MULTIPLICAR"	onclick="presionar_tecla('*');">×</button>
+			<button type="button" data-type="number" 	class="button button_type_number" 		value="1"			onclick="presionar_tecla(1);">1</button>
+			<button type="button" data-type="number" 	class="button button_type_number" 		value="2"			onclick="presionar_tecla(2);">2</button>
+			<button type="button" data-type="number" 	class="button button_type_number" 		value="3"			onclick="presionar_tecla(3);">3</button>
+			<button type="button" data-type="operation" class="button button_type_operation" 	value="RESTAR"		onclick="presionar_tecla('-');">-</button>
+			<button type="button" data-type="number" 	class="button button_type_number" 		value="0"			onclick="presionar_tecla(0);">0</button>
+			<button disabled type="button" data-type="number" class="button button_type_number" value="."			onclick="boton_inactivo();">.</button>
+			<button type="button" data-type="equals" 	class="button button_type_operation" 	value="CALCULAR"	onclick="presionar_tecla('=');">=</button>
+			<button type="button" data-type="operation" class="button button_type_operation" 	value="SUMAR"		onclick="presionar_tecla('+');">+</button>
+		</div>
+	</div>
+</body>
+</html>
